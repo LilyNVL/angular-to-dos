@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Todo } from './model/todo';
 
-const firstTodoList: Todo[] = [{id:1, title:'Hello World'}];
+const firstTodoList: Todo[] = [{id:1, title:'Hello World'}, {id:2, title:'Wubba Lubba'}, {id:3, title: 'Dub Dub!'}];
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +9,9 @@ const firstTodoList: Todo[] = [{id:1, title:'Hello World'}];
 export class TodoService {
   todoList: Todo[] = [];
 
-  constructor() {}
+  constructor() {
+    this.todoList = firstTodoList;
+  }
 
 
 getToDoList(): Todo[] {
@@ -17,7 +19,11 @@ getToDoList(): Todo[] {
 }
 
 addTodo(todo:Todo): void {
-  this.todoList.push(todo);
+  if(todo.title!=="") {
+    this.todoList.push(todo);
+  } else {
+    alert('Please enter something to do')
+  }
 }
 
 removeTodo(todo:Todo): void {

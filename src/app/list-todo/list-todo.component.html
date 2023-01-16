@@ -1,9 +1,14 @@
 <div class="todo-app">
+  
   <app-todo-input (submit)="addTodo($event)"></app-todo-input>
+
+<!-- Bouton pour route, j'avais remplacé la balise du dessus par mon router-outlet mais cela rendait le input inactif?
+    <button class="btn" routerLink="/add-todo">ADD A TODO</button>  -->
 
   <ul>
     <li *ngFor="let Todo of todoList">
       <app-add-todo [todo]="Todo" (update)="updateTodo($event.todo)" (remove)="removeTodo($event)"></app-add-todo>
     </li>
   </ul>
+  <router-outlet></router-outlet>
 </div>

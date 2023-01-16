@@ -21,8 +21,9 @@ export class AddTodoComponent {
     this.remove.emit(this.todo);
   }
 
-  completeTodo():void {
-    this.update.emit({todo: this.todo})
-  }
+/// NE MARCHE PAS???
+/// completeTodo():void {this.update.emit({todo: this.todo})}
+/// html sur la balise input: `(click)="completeTodo()" [checked]="todo.completed"`
+ 
 
 }

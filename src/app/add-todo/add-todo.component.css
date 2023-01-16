@@ -5,23 +5,23 @@ div {
 .todos {
   display: flex;
   justify-content:space-between;
-  flex-grow: 1;
   margin-bottom: 5px;
-  padding: 10px 5px;
+  padding: 10px 0;
   border-top: 1px dotted #b9b9b9;
   line-height: 30px;
   min-height: 30px;
 }
 
 .todo-title {
-  flex-grow: 1;
+  margin: 0 5px 0 5px;
   padding-left: 10px;
 }
 
-.todo-checkbox {
-  margin: auto;
+input[type=checkbox] {
+  vertical-align: baseline;
+  cursor: pointer;
 }
 
-.todo-complete {
+input:checked + span {
   text-decoration: line-through;
 }

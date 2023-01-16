@@ -4,13 +4,14 @@
 
 .btn {
   background-color: #000;
+  font-weight: 700;
   color: #fff;
+  margin-left: 5px;
   padding: 3px 10px;
-  margin: 0 0 0 3px;
   border: none;
   border-radius: 5px;
-  line-height: 24px;
   vertical-align: bottom;
+  cursor: pointer;
 }
 
 .btn:hover {

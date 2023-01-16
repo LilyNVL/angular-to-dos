@@ -17,7 +17,7 @@ export class ListTodoComponent {
   }
 
   addTodo(title:string): void {
-    this.TodoService.addTodo({id:1, title});
+    this.TodoService.addTodo({"id":this.todoList.length+1, title});
   }
 
   removeTodo(todo:Todo):void {
