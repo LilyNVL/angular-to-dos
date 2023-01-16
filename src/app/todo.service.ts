@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Todo } from './model/todo';
 
@@ -9,7 +10,7 @@ const firstTodoList: Todo[] = [{id:1, title:'Hello World'}, {id:2, title:'Wubba 
 export class TodoService {
   todoList: Todo[] = [];
 
-  constructor() {
+  constructor(private http:HttpClient) {
     this.todoList = firstTodoList;
   }
 
@@ -19,6 +20,7 @@ getToDoList(): Todo[] {
 }
 
 addTodo(todo:Todo): void {
+  this.http.post('http://localhost:3000/add-todo', todo).subscribe();
   if(todo.title!=="") {
     this.todoList.push(todo);
   } else {

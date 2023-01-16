@@ -7,6 +7,7 @@ import { AddTodoComponent } from './add-todo/add-todo.component';
 import { ListTodoComponent } from './list-todo/list-todo.component';
 import { TodoInputComponent } from './todo-input/todo-input.component';
 import { Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { Routes } from '@angular/router';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
