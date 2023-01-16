@@ -1,13 +1,9 @@
-<section class="todo-list">
-    <div class="todo-card">
-      <input type="checkbox">
+<div class="todo-app">
+  <app-todo-input (submit)="addTodo($event)"></app-todo-input>
 
-      <p>Un premier todo d'exemple ... </p>
-
-      <button class="todo-remove" type="button">
-        <span class="material-symbols-outlined">
-          delete
-        </span>
-      </button>
-    </div>
-  </section>
+  <ul>
+    <li *ngFor="let Todo of todoList">
+      <app-add-todo [todo]="Todo" (update)="updateTodo($event.todo)" (remove)="removeTodo($event)"></app-add-todo>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,16 @@
+.todo-app {
+    position: relative;
+    width: 400px;
+    padding: 30px 30px 15px;
+    background: transparent;
+    border: 1px dotted #b9b9b9;
+    border-radius: 2px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+}
+
+ul {
+    list-style: none;
+    vertical-align: baseline;
+    padding: 0;
+}
